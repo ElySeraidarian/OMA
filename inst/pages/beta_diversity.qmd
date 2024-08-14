@@ -614,7 +614,7 @@ coef <- rda$CCA$v
 coef <- coef[, 1, drop = FALSE]
 
 #Create a plot
-plotLoadings(coef, ncomponents = 1) + labs(x = "", y= "", title = "Top Taxa") +
+plotLoadings(coef, ncomponents = 1, n = 20) + labs(x = "", y= "", title = "Top Taxa") +
     theme_bw()
 ```
 
