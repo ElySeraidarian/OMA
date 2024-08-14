@@ -613,20 +613,7 @@ rda <- attr(rda, "rda")
 coef <- rda$CCA$v
 coef <- coef[, 1, drop = FALSE]
 
-# Get the taxa with biggest weights
-top_coef <- head(coef[rev(order(abs(coef))), , drop = FALSE], 20)
-# Sort weights in increasing order
-top_coef <- top_coef[order(top_coef), ]
-
-# Create data.frame
-df <- data.frame(
-    x = top_coef,
-    y = factor(names(top_coef), unique(names(top_coef))))
-
-# Create a plot
-ggplot(df, aes(x = x, y = y)) +
-    geom_bar(stat = "identity") +
-    labs(x = "", y= "", title = "Top Taxa") +
+plotLoadings(coef, ncomponents = 1) + labs(x = "", y= "", title = "Top Taxa") +
     theme_bw()
 ```
 
