@@ -607,7 +607,7 @@ how the groups tend to differ from each other in terms of community
 composition.
 
 ```{r plot-top-coef-anova, fig.cap = ""}
-plotLoadings(tse2, "RDA", ncomponents = 1, n = 20)
+plotLoadings(tse2, "RDA", ncomponents = 2, n = 20)
 ```
 
 In the example above, the largest differences between the two groups
