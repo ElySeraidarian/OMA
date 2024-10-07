@@ -607,15 +607,7 @@ how the groups tend to differ from each other in terms of community
 composition.
 
 ```{r plot-top-coef-anova, fig.cap = ""}
-# Extract loadings for first eigenvector
-rda <- reducedDim(tse2, "RDA")
-rda <- attr(rda, "rda")
-coef <- rda$CCA$v
-coef <- coef[, 1, drop = FALSE]
-
-#Create a plot
-plotLoadings(coef, ncomponents = 1, n = 20) + labs(x = "", y= "", title = "Top Taxa") +
-    theme_bw()
+plotLoadings(tse2, "RDA", ncomponents = 1, n = 20)
 ```
 
 In the example above, the largest differences between the two groups
