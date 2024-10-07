@@ -32,6 +32,7 @@ grid
 gtools
 gsEasy
 igraph
+IntegratedLearner
 knitr
 Maaslin2
 mia
@@ -67,7 +68,6 @@ SpiecEasi
 SPRING
 stats
 stringr
-SuperLearner
 tidyverse
 topGO
 vegan
